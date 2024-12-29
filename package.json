@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "HTML Portfolio w/SASS",
+  "author": "Michael Foster",
+  "scripts": {
+    "sass": "sass scss:css",
+    "sass:watch": "sass --watch scss:css",
+    "serve": "http-server -p 8080",
+    "start": "concurrently \"npm run sass:watch\" \"npm run serve\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.1",
+    "http-server": "^14.1.1",
+    "sass": "^1.83.0"
+  }
+}
