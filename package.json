@@ -4,14 +4,20 @@
   "description": "HTML Portfolio w/SASS",
   "author": "Michael Foster",
   "scripts": {
-    "sass": "sass scss:css",
-    "sass:watch": "sass --watch scss:css",
+    "sass": "sass src/scss:build/css",
+    "sass:watch": "sass --watch src/scss:build/css",
+    "gen": "node generateIndex.js && node generateIndex.js",
     "serve": "http-server -p 8080",
-    "start": "concurrently \"npm run sass:watch\" \"npm run serve\""
+    "start": "concurrently \"npm run sass:watch\" \"npm run serve\"",
+    "build": "npm run gen && npm run sass && cp -R src/js build/js"
   },
   "devDependencies": {
     "concurrently": "^9.1.1",
     "http-server": "^14.1.1",
     "sass": "^1.83.0"
+  },
+  "dependencies": {
+    "liquidjs": "^10.20.0",
+    "marked": "^15.0.4"
   }
 }

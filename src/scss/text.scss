@@ -1,23 +1,29 @@
 @use 'colors';
 
 .display {
-    font-family: "Codystar", sans-serif;
+    font-family: "Alata", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: colors.$primary-dark;
-    font-size: 4.5rem;
+    color: colors.$primary-light;
+    font-size: 5rem;
 }
 
 .dm-mono, a {
     font-family: "DM Mono", monospace;
     font-weight: 400;
     font-style: normal;
-    color: colors.$primary;
+    font-size: 1.5rem;
+    color: colors.$primary-light;
     font-feature-settings: 'ss01' on, 'ss03' on, 'ss04' on, 'ss05' on;
 }
 
+a:hover {
+    color: colors.$primary;
+    cursor: pointer;
+}
+
 h1 {
-    margin: 0
+    margin: 0;
 }
 
 

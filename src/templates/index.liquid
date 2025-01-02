@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Mike Foster - frontend engineer and product creator</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet"
+      />
+      <script src="js/index.js" type="module"></script>
+      <link rel="stylesheet" href="css/base.css" />
+    </head>
+
+    <body>
+      {% include 'src/templates/header.liquid' %}
+      <main>
+        <section class="hero">
+          <div class="hero_slot">
+            <div class="text-center">
+              <h1 class="display">MIKE FOSTER</h1>
+              <p class="dm-mono">frontend engineer and product creator</p>
+              <div>
+                <a>Linked In</a>
+                <a>bluesky</a>
+                <a>github</a>
+                <button>resume</button>
+              </div>
+            </div>
+          </div>
+          <span class="hero_slot">
+            <pre id="ascii-face" class="dm-mono"></pre>
+          </span>
+        </section>
+      </main>
+      <section>
+        <p>
+          Hello! My name is Mike Foster and I am a frontend engineer based in
+          San Francisco.
+        </p>
+      </section>
+      <section>
+        <h1>Projects</h1>
+      </section>
+      <section>
+        <h1>Blog</h1>
+      </section>
+      {% include 'src/templates/footer.liquid' %}
+    </body>
+  </html>
