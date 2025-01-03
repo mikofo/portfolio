@@ -6,14 +6,16 @@
   "scripts": {
     "sass": "sass src/scss:build/css",
     "sass:watch": "sass --watch src/scss:build/css",
-    "gen": "node generateIndex.js && node generateIndex.js",
+    "gen": "node generateIndex.js && node generatePosts.js",
+    "gen:watch": "nodemon --watch src -e md \"generatePosts.js\"",
     "serve": "http-server -p 8080",
-    "start": "concurrently \"npm run sass:watch\" \"npm run serve\"",
+    "start": "concurrently \"npm run sass:watch\" \"npm run gen:watch\" \"npm run serve\"",
     "build": "npm run gen && npm run sass && cp -R src/js build/js"
   },
   "devDependencies": {
     "concurrently": "^9.1.1",
     "http-server": "^14.1.1",
+    "nodemon": "^3.1.9",
     "sass": "^1.83.0"
   },
   "dependencies": {

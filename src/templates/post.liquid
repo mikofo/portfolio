@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% include 'src/templates/head.liquid' %}
   <title>{{ title }}</title>
 </head>
+
 <body>
-  <header>
-    <h1>{{ title }}</h1>
-    <p><em>{{ date }}</em></p>
-  </header>
+  {% include 'src/templates/header.liquid' %}
   <main>
-    {{ content | raw }}
+    <article>
+      {{ content | raw }}
+    </article>
   </main>
-    {% include 'src/templates/footer.liquid' %}
+  {% include 'src/templates/footer.liquid' %}
 </body>
+
 </html>

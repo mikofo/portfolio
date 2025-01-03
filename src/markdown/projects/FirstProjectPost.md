@@ -1,4 +1,9 @@
-# First Blog Post!
+---
+title: First Blog Post!!
+template: post
+---
+
+# First Blog Post!!
 
 This is a **Markdown** blog post.
 
