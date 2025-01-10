@@ -10,7 +10,8 @@
     "gen:watch": "nodemon --watch src -e md \"generatePosts.js\"",
     "serve": "http-server -p 8080",
     "start": "concurrently \"npm run sass:watch\" \"npm run gen:watch\" \"npm run serve\"",
-    "build": "npm run gen && npm run sass && cp -R src/js build/js"
+    "build": "npm run gen && npm run sass && cp -R src/js build/js",
+    "drip": "drippy build"
   },
   "devDependencies": {
     "concurrently": "^9.1.1",
@@ -20,6 +21,7 @@
   },
   "dependencies": {
     "liquidjs": "^10.20.0",
-    "marked": "^15.0.4"
+    "marked": "^15.0.4",
+    "drippy": "file:../drippy"
   }
 }

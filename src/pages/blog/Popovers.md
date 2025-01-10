@@ -57,4 +57,4 @@ This works by hiding the .tooltip element by default (display: none;) and then s
 - Dismiss on Outside Click: Add an event listener to the document to close the popover when the user clicks outside of it.
 - Animations: Use CSS transitions or animations for a smoother user experience.
 
-As the <popover> element gains wider browser support, we can eventually transition to it, but for now, this approach offers a reliable alternative.
+As the `<popover>` element gains wider browser support, we can eventually transition to it, but for now, this approach offers a reliable alternative.

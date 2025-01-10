@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+     {% include 'src/templates/head.liquid' %}
+      <title>Mike Foster - Projects</title>
+    </head>
+
+    <body>
+      {% include 'src/templates/header.liquid' %}
+      <main>
+        <ul>
+          {% for project in collection %}
+            <li>{{ project.title }}</li>
+          {% endfor %}
+        </ul>
+      </main>
+      {% include 'src/templates/footer.liquid' %}
+    </body>
+  </html>
