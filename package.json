@@ -6,22 +6,22 @@
   "scripts": {
     "sass": "sass src/scss:build/css",
     "sass:watch": "sass --watch src/scss:build/css",
-    "gen": "node generateIndex.js && node generatePosts.js",
-    "gen:watch": "nodemon --watch src -e md \"generatePosts.js\"",
-    "serve": "http-server -p 8080",
-    "start": "concurrently \"npm run sass:watch\" \"npm run gen:watch\" \"npm run serve\"",
-    "build": "npm run gen && npm run sass && cp -R src/js build/js",
+    "watch": "nodemon --watch src -e js,html,md,liquid --exec \"npm run build\"",
+    "serve": "browser-sync start --server build --files 'build/**/*' --port 8080 --no-notify",
+    "start": "concurrently \"npm run sass:watch\" \"npm run watch\" \"npm run serve\"",
+    "build": "drippy build && npm run sass && cp -R src/js build/js",
     "drip": "drippy build"
   },
   "devDependencies": {
+    "browser-sync": "^3.0.3",
     "concurrently": "^9.1.1",
     "http-server": "^14.1.1",
     "nodemon": "^3.1.9",
     "sass": "^1.83.0"
   },
   "dependencies": {
+    "drippy": "file:../drippy",
     "liquidjs": "^10.20.0",
-    "marked": "^15.0.4",
-    "drippy": "file:../drippy"
+    "marked": "^15.0.4"
   }
 }
