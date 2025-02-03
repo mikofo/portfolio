@@ -1,0 +1,33 @@
+@use "colors";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: right;
+  gap: 24px;
+  font-size: 1.25rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: left;
+  gap: 24px;
+  list-style-type: none;
+}
+
+ul > li > a {
+  font-size: 1.25rem;
+}
+
+ul > li:first-child {
+  list-style-type: none;
+}
+
+nav > ul > li::marker {
+  color: colors.$primary;
+}

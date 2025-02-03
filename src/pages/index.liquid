@@ -3,7 +3,6 @@
     <head>
      {% include 'src/templates/head.liquid' %}
       <title>Mike Foster - frontend engineer and product creator</title>
-      <script src="js/index.js" type="module"></script>
     </head>
 
     <body>
@@ -12,27 +11,14 @@
         <section class="hero">
           <div class="hero_slot">
             <div class="text-center">
-              <h1 class="display">MIKE FOSTER</h1>
+              <h1 class="logo">MIKE FOSTER</h1>
               <p class="dm-mono">frontend engineer and product creator</p>
-              <div>
-                <a>Linked In</a>
-                <a>bluesky</a>
-                <a>github</a>
-                <button>resume</button>
-              </div>
             </div>
           </div>
           <span class="hero_slot">
-            <pre id="ascii-face" class="dm-mono"></pre>
           </span>
         </section>
       </main>
-      <section>
-        <p>
-          Hello! My name is Mike Foster and I am a frontend engineer based in
-          San Francisco.
-        </p>
-      </section>
       <section>
         <h1>Projects</h1>
         {{ projects[0].title }}

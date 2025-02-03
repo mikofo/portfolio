@@ -9,18 +9,17 @@
     "watch": "nodemon --watch src -e js,html,md,liquid --exec \"npm run build\"",
     "serve": "browser-sync start --server build --files 'build/**/*' --port 8080 --no-notify",
     "start": "concurrently \"npm run sass:watch\" \"npm run watch\" \"npm run serve\"",
-    "build": "drippy build && npm run sass && cp -R src/js build/js",
-    "drip": "drippy build"
+    "build": "drippy build && npm run sass && cp -R src/js build/js"
   },
   "devDependencies": {
     "browser-sync": "^3.0.3",
     "concurrently": "^9.1.1",
+    "drippy-liquid": "^0.1.4",
     "http-server": "^14.1.1",
     "nodemon": "^3.1.9",
     "sass": "^1.83.0"
   },
   "dependencies": {
-    "drippy": "file:../drippy",
     "liquidjs": "^10.20.0",
     "marked": "^15.0.4"
   }

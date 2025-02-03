@@ -1,9 +1,35 @@
 <header>
+    {% if pathname == '/' %}
+        <ul class="social-links">
+            <li><a href="https://github.com/mikofo" target="_blank" rel="noopener noreferrer">github</a></li>
+            <li><a href="https://linkedin.com/in/mfdev" target="_blank" rel="noopener noreferrer">linkedin</a></li>
+            <li><a href="https://twitter.com/mikofo" target="_blank" rel="noopener noreferrer">bluesky</a></li>
+        </ul>
+    {% endif %}
+    
+    {% unless pathname == '/' %}
+        <div class="logo_link">
+            <a href="/">MIKE FOSTER</a>
+        </div>
+    {% endunless %}
+    
     <nav>
-        <ul class="flex space-x-8 justify-center">
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#blog">blog</a></li>
-            <li><a href="#about">about me</a></li>
+        <ul class="nav-links">
+            {% unless pathname == '/' %}
+                <li class="nav-item" data-path="home"><a href="/">home</a></li>
+            {% endunless %}
+            {% unless pathname == '/projects' %}
+                <li class="nav-item" data-path="projects"><a href="/projects">projects</a></li>
+            {% endunless %}
+            {% unless pathname == '/blog' %}
+                <li class="nav-item" data-path="blog"><a href="/blog">blog</a></li>
+            {% endunless %}
+            {% unless pathname == '/about' %}
+                <li class="nav-item" data-path="about"><a href="/about">about</a></li>
+            {% endunless %}
+            {% unless pathname == '/resume' %}
+                <li class="nav-item" data-path="resume"><a href="/resume">resume</a></li>
+            {% endunless %}
         </ul>
     </nav>
 </header>

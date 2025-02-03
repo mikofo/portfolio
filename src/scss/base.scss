@@ -1,47 +1,31 @@
-@use 'colors';
-@use 'breakpoints';
-@use 'text';
-@use 'utilities';
-@use 'hero';
-@use 'ascii-face';
+@use "colors";
+@use "breakpoints";
+@use "text";
+@use "utilities";
+@use "hero";
+@use "ascii-face";
+@use "header";
 
 body {
-    background: colors.$background;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
+  background: colors.$background;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding-left: 128px;
+  padding-right: 128px;
 }
 
 main {
-    flex: 1;
-    width: 100%;
-    display: flex;
+  flex: 1;
+  width: 100%;
+  display: flex;
 }
 
+a {
+  text-decoration: none;
 
-nav>ul {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    padding-top: 0.75rem;
+  &:visited {
+    color: colors.$primary-dark;
+  }
 }
-
-ul {
-    padding: 0;
-}
-
-nav>ul>li>a {
-    text-decoration: none;
-    font-size: 1.25rem;
-}
-
-nav>ul>li:first-child {
-    list-style-type: none;
-}
-
-nav>ul>li::marker {
-    color: colors.$primary;
-}
-
-
