@@ -1,9 +1,10 @@
 ---
-title: First Blog Post!!
+title: Drippy HTML
+subtitle: Why I built a micro-framework for static sites
 template: post
 ---
 
-# First Blog Post!!
+# Drippy HTML
 
 This is a **Markdown** blog post.
 

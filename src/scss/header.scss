@@ -1,5 +1,5 @@
 @use "colors";
-
+@use "text";
 header {
   display: flex;
   justify-content: space-between;
@@ -7,10 +7,28 @@ header {
 }
 
 .nav-links {
+  @include text.dm-mono;
+  color: colors.$primary;
   display: flex;
   justify-content: right;
-  gap: 24px;
+  gap: 0;
   font-size: 1.25rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li:not(:last-child)::after {
+  content: ".";
+  margin: 0 24px;
+  color: colors.$primary;
+  font-family: serif;
+  font-size: 1.75rem;
 }
 
 .social-links {
@@ -28,6 +46,7 @@ ul > li:first-child {
   list-style-type: none;
 }
 
-nav > ul > li::marker {
-  color: colors.$primary;
-}
+// Remove or comment out the marker styling since we're not using list markers anymore
+// nav > ul > li::marker {
+//   color: colors.$primary;
+// }

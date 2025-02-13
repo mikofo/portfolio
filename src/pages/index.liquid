@@ -9,19 +9,18 @@
       {% include 'src/templates/header.liquid' %}
       <main>
         <section class="hero">
-          <div class="hero_slot">
-            <div class="text-center">
-              <h1 class="logo">MIKE FOSTER</h1>
-              <p class="dm-mono">frontend engineer and product creator</p>
+            <div class="hero_slot">
+              <h1 class="logo">MIKE&nbsp;FOSTER</h1>
             </div>
-          </div>
-          <span class="hero_slot">
-          </span>
+            <div class="hero_slot">
+              <p class="dm-mono" role='doc-subtitle'>frontend engineer & product creator</p>
+            </div>
         </section>
       </main>
       <section>
         <h1>Projects</h1>
         {{ projects[0].title }}
+        {% include 'src/templates/article-link.liquid' with article: projects[0] %}
       </section>
       <section>
         <h1>Blog</h1>
