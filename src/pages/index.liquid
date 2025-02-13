@@ -19,8 +19,11 @@
       </main>
       <section>
         <h1>Projects</h1>
-        {{ projects[0].title }}
-        {% include 'src/templates/article-link.liquid' with article: projects[0] %}
+        <ul class="article-grid">
+          {% for article in projects %}
+            {% include 'src/templates/article-link.liquid' with article %}
+          {% endfor %}
+        </ul>
       </section>
       <section>
         <h1>Blog</h1>

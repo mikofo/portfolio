@@ -14,7 +14,7 @@
   "devDependencies": {
     "browser-sync": "^3.0.3",
     "concurrently": "^9.1.1",
-    "drippy-liquid": "^0.1.4",
+    "drippy-liquid": "^0.1.6",
     "nodemon": "^3.1.9",
     "sass": "^1.83.0"
   }
