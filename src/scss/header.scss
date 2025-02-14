@@ -1,5 +1,6 @@
 @use "colors";
-@use "text";
+@use "fonts";
+
 header {
   display: flex;
   justify-content: space-between;
@@ -7,7 +8,7 @@ header {
 }
 
 .nav-links {
-  @include text.dm-mono;
+  @include fonts.dm-mono;
   color: colors.$primary;
   display: flex;
   justify-content: right;
@@ -36,6 +37,7 @@ header {
   justify-content: left;
   gap: 24px;
   list-style-type: none;
+  margin-left: 0px;
 }
 
 ul > li > a {
@@ -45,8 +47,3 @@ ul > li > a {
 ul > li:first-child {
   list-style-type: none;
 }
-
-// Remove or comment out the marker styling since we're not using list markers anymore
-// nav > ul > li::marker {
-//   color: colors.$primary;
-// }

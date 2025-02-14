@@ -10,23 +10,34 @@
       <main>
         <section class="hero">
             <div class="hero_slot">
-              <h1 class="logo">MIKE&nbsp;FOSTER</h1>
+              <img src="/assets/logo.png" alt="Mike Foster" class="logo">
             </div>
             <div class="hero_slot">
               <p class="dm-mono" role='doc-subtitle'>frontend engineer & product creator</p>
             </div>
         </section>
       </main>
-      <section>
+      <section class='articles'>
+      <div class="articles-header">
         <h1>Projects</h1>
-        <ul class="article-grid">
+        <a href="/projects">See All ></a>
+        </div>
+        <ul>
           {% for article in projects %}
-            {% include 'src/templates/article-link.liquid' with article %}
+            {% include 'src/templates/project-link.liquid' with article %}
           {% endfor %}
         </ul>
       </section>
-      <section>
-        <h1>Blog</h1>
+      <section class='articles'>
+        <div class="articles-header">
+          <h1>Blog</h1>
+          <a href="/blog">See All ></a>
+        </div>
+        <ul>
+          {% for article in blog %}
+            {% include 'src/templates/blog-link.liquid' with article %}
+          {% endfor %}
+        </ul>
       </section>
       {% include 'src/templates/footer.liquid' %}
     </body>

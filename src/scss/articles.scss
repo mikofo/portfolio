@@ -1,0 +1,49 @@
+@use "fonts";
+.articles {
+  margin-bottom: 5rem;
+}
+
+.articles > h1 {
+  @include fonts.dm-mono;
+  font-weight: 500;
+}
+
+.articles > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.articles-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  > a {
+    @include fonts.dm-sans;
+    font-weight: 200;
+    font-size: 1.25rem;
+    padding-top: 0.25rem;
+  }
+}
+
+.project-title {
+  @include fonts.dm-mono;
+  font-size: 1.75rem;
+}
+
+.project-subtitle,
+.blog-title {
+  @include fonts.dm-sans;
+  font-size: 1.5rem;
+}
+
+.blog-meta {
+  @include fonts.dm-mono;
+  font-weight: 100;
+  font-size: 1rem;
+}

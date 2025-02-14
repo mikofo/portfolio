@@ -5,6 +5,8 @@
   @include utilities.flex-center;
   flex-direction: column;
   gap: 2rem;
+  padding-top: 15rem;
+  margin-bottom: 15rem;
 }
 
 .hero_slot {
@@ -14,11 +16,12 @@
 }
 
 .hero_slot:first-child {
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .hero_slot:last-child {
   justify-content: flex-end;
+  font-weight: 100;
 }
 
 @media (max-width: breakpoints.$tablet), (max-height: breakpoints.$min-height) {

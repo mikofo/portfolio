@@ -1,6 +1,8 @@
 ---
 title: Creating a Popover in React with Pure CSS
 template: post
+topic: Engineering
+date: Aug 08, 2024
 ---
 
 ## Creating a Popover in React (Without the `<popover>` Tag... Yet!)

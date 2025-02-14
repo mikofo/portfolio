@@ -1,23 +1,5 @@
 @use "colors";
-
-@mixin dm-mono {
-  font-family: "DM Mono", monospace;
-  font-weight: 300;
-  font-style: normal;
-  // color: colors.$primary-light;
-  // font-feature-settings:
-  //   "ss01" on,
-  //   "ss03" on,
-  //   "ss04" on,
-  //   "ss05" on;
-}
-
-@mixin codystar {
-  font-family: "Codystar", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: colors.$primary;
-}
+@use "fonts";
 
 a {
   text-decoration: none;
@@ -33,24 +15,9 @@ a {
   }
 }
 
-.logo {
-  @include codystar;
-  font-size: 9rem;
-  text-align: justify;
-  text-align-last: justify;
-  text-justify: distribute;
-  letter-spacing: 0.5rem;
-  width: 100%;
-}
-
-.logo_link {
-  @include codystar;
-  font-size: 2rem;
-}
-
 h1 {
   margin: 0;
-  @include dm-mono;
+  @include fonts.dm-mono;
   font-size: 2rem;
   color: colors.$primary;
 }
@@ -62,7 +29,7 @@ p {
 }
 
 p[role="doc-subtitle"] {
-  @include dm-mono;
+  @include fonts.dm-mono;
   font-size: 1.25rem;
   color: colors.$primary;
   text-align: right;

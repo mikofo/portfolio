@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Tonetabs",
+    "subtitle": "Building an indie product from scratch",
+    "template": "post",
+    "pathname": "/projects/01-tonetabs"
+  },
+  {
+    "title": "Drippy HTML",
+    "subtitle": "Why I built a micro-framework for static sites",
+    "template": "post",
+    "pathname": "/projects/02-drippy-html"
+  },
+  {
+    "title": "Hum Capital",
+    "subtitle": "Taking a product from 0 to 1 in 2 weeks",
+    "template": "post",
+    "pathname": "/projects/03-hum"
+  }
+]
