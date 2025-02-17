@@ -7,10 +7,14 @@
 
     <body>
       {% include 'src/templates/header.liquid' %}
-      <main>
-        <ul>
-          {% for project in collection %}
-            <li>{{ project.title }}</li>
+       <main class="articles">
+        <h1 class="title">Blog</h1>
+        <p class="subtitle">
+          Here are some of my thoughts on software development, design, and other topics.
+        </p>
+        <ul class="article-grid">
+          {% for article in blog %}
+            {% include 'src/templates/blog-link.liquid' with article %}
           {% endfor %}
         </ul>
       </main>

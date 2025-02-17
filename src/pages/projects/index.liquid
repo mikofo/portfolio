@@ -7,10 +7,14 @@
 
     <body>
       {% include 'src/templates/header.liquid' %}
-      <main>
-        <ul>
-          {% for project in projects %}
-            <li>{{ project.title }}</li>
+      <main class="articles">
+        <h1 class="title">Projects</h1>
+        <p class="subtitle">
+          Here are case studies from my favorite projects. Projects range from professional to personal and cover a variety of topics.
+        </p>
+        <ul class="article-grid">
+          {% for article in projects %}
+            {% include 'src/templates/project-link.liquid' with article %}
           {% endfor %}
         </ul>
       </main>
