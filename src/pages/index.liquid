@@ -6,39 +6,45 @@
     </head>
 
     <body>
-      {% include 'src/templates/header.liquid' %}
-      <main>
-        <section class="hero">
+      <main class="hero">
             <div class="hero_slot">
-              <img src="/assets/logo.png" alt="Mike Foster" class="logo">
-            </div>
-            <div class="hero_slot">
+              {% include 'src/templates/logo.liquid' %}
               <p class="dm-mono" role='doc-subtitle'>frontend engineer & product creator</p>
+              <section id="about" class='mobile-only'>
+                <p >
+                  I'm a frontend engineer and product creator with a passion for building products that help people live better lives.
+                </p>
+              </section>
+              <nav class="flex mobile-only">
+                <a href="/projects">Projects ></a>
+                <a href="/blog">Blog ></a>
+              </nav>
             </div>
-        </section>
+            <div class="hero_slot">
+            {% include 'src/templates/hero-nav.liquid' %}
+              <section id="about" class='hero_slot__content'>
+                <p >
+                  I'm a frontend engineer and product creator with a passion for building products that help people live better lives.
+                </p>
+              </section>
+              <section id="projects">
+                <ul class="no-margin no-padding hero_slot__content">
+                  {% for article in projects limit: 3 %}
+                    {% include 'src/templates/project-preview.liquid' with article %}
+                  {% endfor %}
+                </ul>
+                <a href="/projects">View all ></a>
+              </section>
+              <section id="blog" >
+                <ul class='no-margin no-padding hero_slot__content'>
+                  {% for article in blog limit: 3 %}
+            {% include 'src/templates/blog-preview.liquid' with article %}
+          {% endfor %}
+                </ul>
+                <a href="/blog">View all ></a>
+              </section>
+            </div>
       </main>
-      <section class='articles'>
-      <div class="articles-header">
-        <h1>Projects</h1>
-        <a href="/projects">See All ></a>
-        </div>
-        <ul>
-          {% for article in projects %}
-            {% include 'src/templates/project-link.liquid' with article %}
-          {% endfor %}
-        </ul>
-      </section>
-      <section class='articles'>
-        <div class="articles-header">
-          <h1>Blog</h1>
-          <a href="/blog">See All ></a>
-        </div>
-        <ul>
-          {% for article in blog %}
-            {% include 'src/templates/blog-link.liquid' with article %}
-          {% endfor %}
-        </ul>
-      </section>
       {% include 'src/templates/footer.liquid' %}
     </body>
   </html>

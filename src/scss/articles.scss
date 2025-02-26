@@ -1,6 +1,40 @@
 @use "fonts";
-.articles {
-  margin-bottom: 5rem;
+
+.project_preview {
+  a {
+    text-decoration: none;
+  }
+
+  &__title {
+    @include fonts.dm-mono;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  &__subtitle {
+    @include fonts.dm-sans;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+}
+
+.blog_preview {
+  a {
+    text-decoration: none;
+  }
+
+  &__title {
+    @include fonts.dm-sans;
+    font-size: 1.5rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  &__meta {
+    @include fonts.dm-mono(100);
+    font-size: 1rem;
+    margin: 0;
+  }
 }
 
 .articles > h1 {
@@ -17,7 +51,7 @@
   margin: 0;
 }
 
-.articles-header {
+.articles_header {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -29,21 +63,4 @@
     font-size: 1.25rem;
     padding-top: 0.25rem;
   }
-}
-
-.project-title {
-  @include fonts.dm-mono;
-  font-size: 1.75rem;
-}
-
-.project-subtitle,
-.blog-title {
-  @include fonts.dm-sans;
-  font-size: 1.5rem;
-}
-
-.blog-meta {
-  @include fonts.dm-mono;
-  font-weight: 100;
-  font-size: 1rem;
 }

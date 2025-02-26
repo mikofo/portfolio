@@ -7,7 +7,7 @@
     "sass": "sass src/scss:build/css",
     "sass:watch": "sass --watch src/scss:build/css",
     "watch": "nodemon --watch src -e js,html,md,liquid --exec \"npm run build\"",
-    "serve": "browser-sync start --server build --files 'build/**/*' --port 8080 --no-notify",
+    "serve": "browser-sync start --config bs-config.js",
     "start": "concurrently \"npm run sass:watch\" \"npm run watch\" \"npm run serve\"",
     "build": "drippy build && npm run sass && cp -R src/js build/js"
   },

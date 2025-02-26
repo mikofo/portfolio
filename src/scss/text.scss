@@ -1,7 +1,9 @@
 @use "colors";
 @use "fonts";
+@use "breakpoints";
 
 a {
+  @include fonts.dm-mono;
   text-decoration: none;
   color: colors.$primary;
 
@@ -39,6 +41,7 @@ p.subtitle {
 }
 
 p {
+  @include fonts.dm-sans;
   font-size: 1.5rem;
   margin: 0;
   opacity: 70;
@@ -49,4 +52,9 @@ p[role="doc-subtitle"] {
   font-size: 1.25rem;
   color: colors.$primary;
   text-align: right;
+
+  @media (max-width: breakpoints.$mobile) {
+    font-size: 1rem;
+    text-align: left;
+  }
 }

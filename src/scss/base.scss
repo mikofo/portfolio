@@ -4,9 +4,9 @@
 @use "text";
 @use "utilities";
 @use "hero";
-@use "ascii-face";
 @use "header";
 @use "articles";
+@use "about";
 
 body {
   background: colors.$background;
@@ -14,12 +14,101 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  padding-left: 200px;
-  padding-right: 200px;
+  // padding-left: 200px;
+  // padding-right: 200px;
 }
 
 .logo {
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+.corners {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  @include fonts.dm-mono;
+  color: colors.$primary;
+  font-size: 1.25rem;
+  font-weight: 100;
+
+  @media (max-width: breakpoints.$mobile) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  &__top-left {
+    justify-self: start;
+    align-self: start;
+  }
+
+  &__top-right {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    justify-self: end;
+    align-self: start;
+  }
+
+  &__bottom-left {
+    justify-self: start;
+    align-self: end;
+
+    @media (max-width: breakpoints.$mobile) {
+      font-size: 1rem;
+    }
+  }
+
+  &__bottom-right {
+    justify-self: end;
+    align-self: end;
+
+    @media (max-width: breakpoints.$mobile) {
+      font-size: 1rem;
+    }
+  }
+}
+
+section {
+  display: none;
+
+  @media (max-width: breakpoints.$mobile) {
+    display: block;
+    width: 100%;
+  }
+}
+
+#about {
+  display: flex;
+}
+
+section:target {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  & > a {
+    @include fonts.dm-mono;
+    color: colors.$primary;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+}
+
+#about:not(:target) {
+  display: none;
+
+  @media (max-width: breakpoints.$mobile) {
+    display: block;
+  }
 }

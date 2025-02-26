@@ -14,10 +14,9 @@
         </p>
         <ul class="article-grid">
           {% for article in blog %}
-            {% include 'src/templates/blog-link.liquid' with article %}
+            {% include 'src/templates/blog-preview.liquid' with article %}
           {% endfor %}
         </ul>
       </main>
-      {% include 'src/templates/footer.liquid' %}
     </body>
   </html>

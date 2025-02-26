@@ -1,19 +1,5 @@
 <header>
-    {% if pathname == '/' %}
-        <ul class="social-links">
-            <li><a href="https://github.com/mikofo" target="_blank" rel="noopener noreferrer">github</a></li>
-            <li><a href="https://linkedin.com/in/mfdev" target="_blank" rel="noopener noreferrer">linkedin</a></li>
-            <li><a href="https://twitter.com/mikofo" target="_blank" rel="noopener noreferrer">bluesky</a></li>
-        </ul>
-    {% endif %}
-    
-    {% unless pathname == '/' %}
-        <div class="logo_link">
-            <a href="/">MIKE FOSTER</a>
-        </div>
-    {% endunless %}
-    
-    <nav>
+ <nav>
         <ul class="nav-links">
             {% unless pathname == '/' %}
                 <li class="nav-item" data-path="home"><a href="/">home</a></li>
@@ -32,4 +18,16 @@
             {% endunless %}
         </ul>
     </nav>
+    
+    {% if pathname == '/' %}
+        {% include 'src/templates/social-links.liquid' %}
+    {% endif %}
+    
+    {% unless pathname == '/' %}
+        <div class="logo_link">
+            <a href="/">MIKE FOSTER</a>
+        </div>
+    {% endunless %}
+    
+   
 </header>

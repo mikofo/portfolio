@@ -9,3 +9,9 @@
   font-weight: $weight;
   font-style: normal;
 }
+
+@mixin jetbrains-mono($weight: 400) {
+  font-family: "JetBrains Mono", "DM Mono", monospace;
+  font-weight: $weight;
+  font-style: normal;
+}

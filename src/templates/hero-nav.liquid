@@ -1,0 +1,31 @@
+<nav>
+    <ul class="hero_slot__nav">
+      <li><a name="about" href="#about" class="hero_slot__nav-link--selected">About</a></li>
+      <li><a name="projects" href="#projects" class="hero_slot__nav-link">Projects</a></li>
+      <li><a name="blog" href="#blog" class="hero_slot__nav-link">Blog</a></li>
+    </ul>
+</nav>
+<script>
+  function updateActiveNavLink() {
+    console.log('window.location.hash', window.location.hash);
+    const hash = window.location.hash || '#about';
+    const navLinks = [
+        document.querySelector('a[name="about"]'),
+        document.querySelector('a[name="projects"]'),
+        document.querySelector('a[name="blog"]'),
+    ]
+    
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === hash) {
+        link.classList.remove('hero_slot__nav-link');
+        link.classList.add('hero_slot__nav-link--selected');
+      } else {
+        link.classList.remove('hero_slot__nav-link--selected');
+        link.classList.add('hero_slot__nav-link');
+      }
+    });
+  }
+
+  window.addEventListener('hashchange', updateActiveNavLink);
+  updateActiveNavLink();
+</script>

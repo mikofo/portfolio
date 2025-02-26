@@ -14,10 +14,9 @@
         </p>
         <ul class="article-grid">
           {% for article in projects %}
-            {% include 'src/templates/project-link.liquid' with article %}
+            {% include 'src/templates/project-preview.liquid' with article %}
           {% endfor %}
         </ul>
       </main>
-      {% include 'src/templates/footer.liquid' %}
     </body>
   </html>

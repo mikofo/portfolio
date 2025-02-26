@@ -13,7 +13,37 @@
       {{ content | raw }}
     </article>
   </main>
-  {% include 'src/templates/footer.liquid' %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get current path
+      const currentPath = window.location.pathname;
+      const currentHash = window.location.hash;
+
+      // Check if we're on a blog post
+      if (currentPath.includes('/blog/')) {
+        if (currentHash === '#comments') {
+          // Handle comments section
+          const commentsSection = document.querySelector('#comments');
+          if (commentsSection) {
+            commentsSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }
+    });
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', function() {
+      const newHash = window.location.hash;
+      // React to hash changes
+      if (newHash) {
+        const targetElement = document.querySelector(newHash);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>
