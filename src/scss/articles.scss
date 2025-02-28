@@ -1,102 +1,88 @@
 @use "fonts";
-@use "colors";
 @use "breakpoints";
+@use "colors";
 
-.article-list {
-  padding: 16rem;
-  padding-top: 3rem;
+article.post {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  padding-left: 22rem;
+  padding-right: 22rem;
 
   @media (max-width: breakpoints.$mobile) {
-    padding: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
-  &__title {
-    @include fonts.dm-mono;
-    font-size: 3rem;
-    margin-bottom: 2.5rem;
-  }
-
-  &__subtitle {
-    @include fonts.dm-sans;
-    font-size: 2rem;
-    color: colors.$primary;
-    margin-bottom: 5rem;
-  }
-
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    row-gap: 3rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    @media (max-width: breakpoints.$mobile) {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-  }
-}
-
-.project_preview {
-  a {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  &__title {
-    @include fonts.dm-mono;
-    font-size: 1.5rem;
-    margin: 0;
-  }
-
-  &__subtitle {
+  p {
     @include fonts.dm-sans;
     font-size: 1.25rem;
-    margin: 0;
+    margin-bottom: 3rem;
+    line-height: 32px;
   }
 
-  .article-list__grid & {
-    &__title {
-      font-size: 2rem;
-    }
-
-    &__subtitle {
-      font-size: 1.75rem;
-    }
-  }
-}
-
-.blog_preview {
-  a {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  &__title {
-    @include fonts.dm-sans;
+  h2,
+  strong {
+    @include fonts.dm-sans(600);
     font-size: 1.5rem;
-    margin: 0;
+    margin-bottom: 1rem;
+    margin-top: 1.95em;
+    color: #242424;
   }
 
-  &__meta {
-    @include fonts.dm-mono(100);
-    font-size: 1rem;
-    margin: 0;
+  .hljs {
+    margin-bottom: 2em;
+    background-color: #e0e1ea;
+    @include fonts.source-code-pro;
+    padding: 2rem;
   }
 
-  .article-list__grid & {
-    &__title {
-      font-size: 2rem;
-    }
+  .hljs-selector-class,
+  .hljs-selector-id,
+  .hljs-selector-tag,
+  .hljs-selector-attr,
+  .hljs-name {
+    color: colors.$primary;
+  }
 
-    &__meta {
-      font-size: 1.5rem;
+  .hljs-selector-pseudo,
+  .hljs-number {
+    color: #1c00cf;
+  }
+
+  .hljs-string,
+  .hljs-comment {
+    color: #007400;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 2em;
+  }
+
+  .post__header {
+    @include fonts.dm-sans(500);
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .post__subtitle {
+    @include fonts.dm-sans(500);
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .post__meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    color: #242424;
+
+    > p {
+      @include fonts.dm-mono;
+      margin-bottom: 0;
+      font-size: 1rem;
     }
   }
 }

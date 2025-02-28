@@ -7,12 +7,12 @@
 
     <body>
       {% include 'src/templates/header.liquid' %}
-      <main class="article-list">
-        <h1 class="article-list__title">Projects</h1>
-        <p class="article-list__subtitle">
+      <main class="preview-list">
+        <h1 class="preview-list__title">Projects</h1>
+        <p class="preview-list__subtitle">
           Here are case studies from my favorite projects. Projects range from professional to personal and cover a variety of topics.
         </p>
-        <ul class="article-list__grid">
+        <ul class="preview-list__grid">
           {% for article in projects %}
             {% include 'src/templates/project-preview.liquid' with article %}
           {% endfor %}

@@ -1,11 +1,24 @@
 @use "colors";
 @use "fonts";
 @use "utilities";
+@use "breakpoints";
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1rem;
+  padding-left: 16rem;
+  padding-right: 16rem;
+
+  @media (max-width: breakpoints.$mobile) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.header__logo {
+  font-size: 1.5rem;
 }
 
 .nav-links {

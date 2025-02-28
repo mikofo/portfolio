@@ -5,8 +5,9 @@
 @use "utilities";
 @use "hero";
 @use "header";
-@use "articles";
+@use "previews";
 @use "about";
+@use "articles";
 
 body {
   background: colors.$background;

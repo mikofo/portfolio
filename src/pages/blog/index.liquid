@@ -7,12 +7,12 @@
 
     <body>
       {% include 'src/templates/header.liquid' %}
-       <main class="article-list">
-        <h1 class="article-list__title">Blog</h1>
-        <p class="article-list__subtitle">
+       <main class="preview-list">
+        <h1 class="preview-list__title">Blog</h1>
+        <p class="preview-list__subtitle">
           Here are some of my thoughts on software development, design, and other topics.
         </p>
-        <ul class="article-list__grid">
+        <ul class="preview-list__grid">
           {% for article in blog %}
             {% include 'src/templates/blog-preview.liquid' with article %}
           {% endfor %}

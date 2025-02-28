@@ -2,6 +2,8 @@
 title: Tonetabs
 subtitle: Building an indie product from scratch
 template: post
+topic: Product, Design, Engineering
+date: 2022-present
 ---
 
 # Tonetabs

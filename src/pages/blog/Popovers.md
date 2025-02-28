@@ -1,19 +1,17 @@
 ---
 title: Creating a Popover in React with Pure CSS
 template: post
-topic: Engineering
+topic: React, CSS
 date: Aug 08, 2024
 ---
 
-## Creating a Popover in React (Without the `<popover>` Tag... Yet!)
-
 The HTML `<popover>` element is on its way to becoming a standard way to create dismissible overlays, but browser support is still evolving. While we wait for full adoption, we can easily create similar functionality in React using a combination of state, CSS, and event handling. This post will guide you through building a simple yet effective popover component.
 
-**The Challenge:**
+## The Challenge
 
 We want to create a small information box that appears when a user hovers over an element. This is a common UI pattern used for tooltips, help text, and other contextual information. Since the `<popover>` tag isn't universally available yet, we'll implement this ourselves.
 
-**The Basic HTML/CSS Approach (as a starting point):**
+## The Basic HTML/CSS Approach
 
 Let's first look at the basic HTML and CSS structure that achieves this effect:
 
@@ -60,3 +58,5 @@ This works by hiding the .tooltip element by default (display: none;) and then s
 - Animations: Use CSS transitions or animations for a smoother user experience.
 
 As the `<popover>` element gains wider browser support, we can eventually transition to it, but for now, this approach offers a reliable alternative.
+
+![Logo](/assets/logo.png)
