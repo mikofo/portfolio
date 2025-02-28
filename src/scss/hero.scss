@@ -11,11 +11,13 @@
   z-index: 1;
 
   @media (max-width: breakpoints.$mobile) {
-    padding-top: 4rem;
+    padding-top: 5rem;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
     height: auto;
+    width: auto;
+    gap: 1rem;
   }
 }
 
@@ -41,7 +43,9 @@
   width: 43%;
 
   @media (max-width: breakpoints.$mobile) {
-    display: none;
+    width: fit-content;
+    height: auto;
+    padding: 1rem;
   }
 }
 

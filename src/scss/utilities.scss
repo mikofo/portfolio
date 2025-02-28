@@ -63,12 +63,12 @@
 
 .mobile-hidden {
   @media (max-width: breakpoints.$mobile) {
-    display: none;
+    display: none !important;
   }
 }
 
 .mobile-only {
   @media (min-width: breakpoints.$mobile) {
-    display: none;
+    display: none !important;
   }
 }

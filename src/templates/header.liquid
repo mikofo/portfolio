@@ -1,4 +1,10 @@
 <header>
+    {% unless pathname == '/' %}
+        <div class="logo_link">
+            <a href="/">MIKE FOSTER</a>
+        </div>
+    {% endunless %}
+    
  <nav>
         <ul class="nav-links">
             {% unless pathname == '/' %}
@@ -10,24 +16,12 @@
             {% unless pathname == '/blog' %}
                 <li class="nav-item" data-path="blog"><a href="/blog">blog</a></li>
             {% endunless %}
-            {% unless pathname == '/about' %}
-                <li class="nav-item" data-path="about"><a href="/about">about</a></li>
-            {% endunless %}
-            {% unless pathname == '/resume' %}
-                <li class="nav-item" data-path="resume"><a href="/resume">resume</a></li>
-            {% endunless %}
         </ul>
     </nav>
     
     {% if pathname == '/' %}
         {% include 'src/templates/social-links.liquid' %}
     {% endif %}
-    
-    {% unless pathname == '/' %}
-        <div class="logo_link">
-            <a href="/">MIKE FOSTER</a>
-        </div>
-    {% endunless %}
     
    
 </header>

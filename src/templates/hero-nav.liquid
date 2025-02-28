@@ -1,4 +1,4 @@
-<nav>
+<nav class="mobile-hidden">
     <ul class="hero_slot__nav">
       <li><a name="about" href="#about" class="hero_slot__nav-link--selected">About</a></li>
       <li><a name="projects" href="#projects" class="hero_slot__nav-link">Projects</a></li>
@@ -7,7 +7,11 @@
 </nav>
 <script>
   function updateActiveNavLink() {
-    console.log('window.location.hash', window.location.hash);
+    if (!window.location.hash) {
+      window.location.hash = '#about';
+      return;
+    }
+
     const hash = window.location.hash || '#about';
     const navLinks = [
         document.querySelector('a[name="about"]'),

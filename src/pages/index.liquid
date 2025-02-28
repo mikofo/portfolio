@@ -10,24 +10,15 @@
             <div class="hero_slot">
               {% include 'src/templates/logo.liquid' %}
               <p class="dm-mono" role='doc-subtitle'>frontend engineer & product creator</p>
-              <section id="about" class='mobile-only'>
-                <p >
-                  I'm a frontend engineer and product creator with a passion for building products that help people live better lives.
-                </p>
-              </section>
-              <nav class="flex mobile-only">
-                <a href="/projects">Projects ></a>
-                <a href="/blog">Blog ></a>
-              </nav>
             </div>
             <div class="hero_slot">
             {% include 'src/templates/hero-nav.liquid' %}
               <section id="about" class='hero_slot__content'>
-                <p >
+                <p>
                   I'm a frontend engineer and product creator with a passion for building products that help people live better lives.
                 </p>
               </section>
-              <section id="projects">
+              <section id="projects" class="mobile-hidden">
                 <ul class="no-margin no-padding hero_slot__content">
                   {% for article in projects limit: 3 %}
                     {% include 'src/templates/project-preview.liquid' with article %}
@@ -35,7 +26,7 @@
                 </ul>
                 <a href="/projects">View all ></a>
               </section>
-              <section id="blog" >
+              <section id="blog" class="mobile-hidden">
                 <ul class='no-margin no-padding hero_slot__content'>
                   {% for article in blog limit: 3 %}
             {% include 'src/templates/blog-preview.liquid' with article %}
@@ -43,6 +34,10 @@
                 </ul>
                 <a href="/blog">View all ></a>
               </section>
+              <nav class="flex mobile-only">
+                <a href="/projects">Project ></a>
+                <a href="/blog">Blog ></a>
+              </nav>
             </div>
       </main>
       {% include 'src/templates/footer.liquid' %}

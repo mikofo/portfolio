@@ -88,10 +88,6 @@ section {
   }
 }
 
-#about {
-  display: flex;
-}
-
 section:target {
   display: flex;
   flex-direction: column;
@@ -102,13 +98,5 @@ section:target {
     color: colors.$primary;
     text-decoration: none;
     font-size: 1rem;
-  }
-}
-
-#about:not(:target) {
-  display: none;
-
-  @media (max-width: breakpoints.$mobile) {
-    display: block;
   }
 }
