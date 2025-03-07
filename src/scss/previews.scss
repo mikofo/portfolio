@@ -7,18 +7,19 @@
   padding-top: 4rem;
 
   @media (max-width: breakpoints.$mobile) {
-    padding: 4rem;
+    padding: 1rem;
+    padding-top: 4rem;
   }
 
   &__title {
     @include fonts.dm-mono;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 2.5rem;
   }
 
   &__subtitle {
     @include fonts.dm-sans;
-    font-size: 2rem;
+    font-size: 1.25rem;
     color: colors.$primary;
     margin-bottom: 5rem;
   }
@@ -58,16 +59,6 @@
     font-size: 1.25rem;
     margin: 0;
   }
-
-  .preview-list__grid & {
-    &__title {
-      font-size: 2rem;
-    }
-
-    &__subtitle {
-      font-size: 1.75rem;
-    }
-  }
 }
 
 .blog_preview {
@@ -88,15 +79,5 @@
     @include fonts.dm-mono(100);
     font-size: 1rem;
     margin: 0;
-  }
-
-  .preview-list__grid & {
-    &__title {
-      font-size: 2rem;
-    }
-
-    &__meta {
-      font-size: 1.5rem;
-    }
   }
 }

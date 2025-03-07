@@ -1,27 +1,27 @@
 <header>
-    {% unless pathname == '/' %}
-        <div class="header__logo">
-            <a href="/">MIKE FOSTER</a>
-        </div>
-    {% endunless %}
+
+{% unless pathname == '/' %}
+    <div class="header__logo">
+        <a href="/">MIKE FOSTER</a>
+    </div>
+{% endunless %}
     
  <nav>
-        <ul class="nav-links">
-            {% unless pathname == '/' %}
-                <li class="nav-item" data-path="home"><a href="/">home</a></li>
-            {% endunless %}
-            {% unless pathname == '/projects' %}
-                <li class="nav-item" data-path="projects"><a href="/projects">projects</a></li>
-            {% endunless %}
-            {% unless pathname == '/blog' %}
-                <li class="nav-item" data-path="blog"><a href="/blog">blog</a></li>
-            {% endunless %}
-        </ul>
-    </nav>
+    <ul class="nav-links">
+        {% unless pathname == '/' %}
+            <li class="nav-item" data-path="home"><a href="/">home</a></li>
+        {% endunless %}
+        {% unless pathname == '/projects' %}
+            <li class="nav-item" data-path="projects"><a href="/projects">projects</a></li>
+        {% endunless %}
+        {% unless pathname == '/blog' %}
+            <li class="nav-item" data-path="blog"><a href="/blog">blog</a></li>
+        {% endunless %}
+    </ul>
+</nav>
     
-    {% if pathname == '/' %}
-        {% include 'src/templates/social-links.liquid' %}
-    {% endif %}
-    
-   
+{% if pathname == '/' %}
+    {% include 'src/templates/social-links.liquid' %}
+{% endif %}
+
 </header>

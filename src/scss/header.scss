@@ -4,6 +4,10 @@
 @use "breakpoints";
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: colors.$background;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,8 +16,10 @@ header {
   padding-right: 16rem;
 
   @media (max-width: breakpoints.$mobile) {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-bottom: 1px solid colors.$primary-disabled;
+    padding-bottom: 0.5rem;
   }
 }
 

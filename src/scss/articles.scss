@@ -9,8 +9,8 @@ article.post {
   padding-right: 22rem;
 
   @media (max-width: breakpoints.$mobile) {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   p {
@@ -71,6 +71,7 @@ article.post {
     @include fonts.dm-sans(500);
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
+    color: #434343;
   }
 
   .post__meta {

@@ -9,7 +9,7 @@
     "watch": "nodemon --watch src -e js,html,md,liquid --exec \"npm run build\"",
     "serve": "browser-sync start --config bs-config.js",
     "start": "concurrently \"npm run sass:watch\" \"npm run watch\" \"npm run serve\"",
-    "build": "drippy build && npm run sass && cp -R src/js build/js"
+    "build": "drippy build && npm run sass"
   },
   "devDependencies": {
     "browser-sync": "^3.0.3",

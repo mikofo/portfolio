@@ -59,4 +59,4 @@ This works by hiding the .tooltip element by default (display: none;) and then s
 
 As the `<popover>` element gains wider browser support, we can eventually transition to it, but for now, this approach offers a reliable alternative.
 
-![Logo](/assets/logo.png)
+<!-- ![Logo](/assets/logo.png) -->
