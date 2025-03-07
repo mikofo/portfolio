@@ -7,6 +7,15 @@
 </nav>
 <script defer>
   function updateActiveNavLink() {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    
+    if (isMobile) {
+      if (window.location.hash) {
+        history.pushState("", document.title, window.location.pathname);
+      }
+      return;
+    }
+
     if (!window.location.hash) {
       window.location.hash = '#about';
       return;
@@ -30,6 +39,7 @@
     });
   }
 
+  window.addEventListener('resize', updateActiveNavLink);
   window.addEventListener('hashchange', updateActiveNavLink);
   updateActiveNavLink();
 </script>
