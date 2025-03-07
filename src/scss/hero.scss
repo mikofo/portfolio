@@ -29,10 +29,11 @@
   width: 57%;
 
   @media (max-width: breakpoints.$mobile) {
-    width: fit-content;
     display: flex;
     align-items: flex-start;
     padding: 1rem;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -43,9 +44,10 @@
   width: 43%;
 
   @media (max-width: breakpoints.$mobile) {
-    width: fit-content;
     height: auto;
     padding: 1rem;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -71,6 +73,10 @@
   flex-direction: column;
   gap: 1.75rem;
   width: 24rem;
+
+  @media (max-width: breakpoints.$mobile) {
+    width: auto;
+  }
 }
 
 pre {

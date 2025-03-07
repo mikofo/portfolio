@@ -15,8 +15,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  // padding-left: 200px;
-  // padding-right: 200px;
 }
 
 .logo {
@@ -85,6 +83,7 @@ body {
 
 section {
   display: none;
+  @include utilities.fade-in;
 
   @media (max-width: breakpoints.$mobile) {
     display: block;

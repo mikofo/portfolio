@@ -1,12 +1,14 @@
 @use "fonts";
 @use "breakpoints";
 @use "colors";
+@use "utilities";
 
 article.post {
   padding-top: 6rem;
   padding-bottom: 4rem;
   padding-left: 22rem;
   padding-right: 22rem;
+  @include utilities.fade-in;
 
   @media (max-width: breakpoints.$mobile) {
     padding-left: 1rem;

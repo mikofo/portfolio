@@ -72,3 +72,30 @@
     display: none !important;
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@mixin fade-in {
+  opacity: 0;
+  animation: fadeIn 0.4s forwards;
+
+  &.hide {
+    animation: fadeOut 0.4s forwards;
+  }
+}
