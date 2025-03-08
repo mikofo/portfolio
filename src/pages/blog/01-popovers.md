@@ -18,7 +18,7 @@ Let's first look at the basic HTML and CSS structure that achieves this effect:
 ```html
 <div class="tooltip-container">
   Instant Capital
-  <div class="tooltip">Lorem ipsum</div>
+  <div class="tooltip">Lorem ipsums</div>
 </div>
 ```
 
