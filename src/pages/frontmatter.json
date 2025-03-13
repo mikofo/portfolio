@@ -8,8 +8,8 @@
     "pathname": "/projects/01-tonetabs.html"
   },
   {
-    "title": "Drippy HTML",
-    "subtitle": "Why I built a micro-framework for static sites",
+    "title": "Drippy Liquid",
+    "subtitle": "Why I built my own micro-framework for static sites",
     "template": "post",
     "pathname": "/projects/02-drippy-html.html"
   },

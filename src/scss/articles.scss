@@ -18,17 +18,17 @@ article.post {
   p {
     @include fonts.dm-sans;
     font-size: 1.25rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     line-height: 32px;
   }
 
   h2,
   strong {
-    @include fonts.dm-sans(600);
+    @include fonts.dm-mono(400);
     font-size: 1.5rem;
     margin-bottom: 1rem;
     margin-top: 1.95em;
-    color: #242424;
+    color: colors.$primary;
   }
 
   .hljs {
@@ -65,13 +65,13 @@ article.post {
 
   .post__header {
     @include fonts.dm-sans(500);
-    font-size: 1.75rem;
+    font-size: 2rem;
     margin-bottom: 0.75rem;
   }
 
   .post__subtitle {
-    @include fonts.dm-sans(500);
-    font-size: 1.25rem;
+    @include fonts.dm-sans(400);
+    font-size: 1.5rem;
     margin-bottom: 0.75rem;
     color: #434343;
   }
@@ -88,4 +88,19 @@ article.post {
       font-size: 1rem;
     }
   }
+
+  .post__content {
+    ul {
+      list-style-type: disc;
+      padding-inline-start: 2rem;
+
+      li {
+        @include fonts.dm-sans;
+        font-size: 1.25rem;
+        line-height: 2.25rem;
+        list-style-type: disc;
+      }
+    }
+  }
 }
+
