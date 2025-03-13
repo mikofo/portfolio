@@ -4,12 +4,12 @@
     "subtitle": "Building an indie product from scratch",
     "template": "post",
     "topic": "Product, Design, Engineering",
-    "date": "2022-present",
+    "date": "2020-present",
     "pathname": "/projects/01-tonetabs.html"
   },
   {
     "title": "Drippy Liquid",
-    "subtitle": "Why I built my own micro-framework for static sites",
+    "subtitle": "Why I built my own micro-framework to make this site",
     "template": "post",
     "pathname": "/projects/02-drippy-html.html"
   },
